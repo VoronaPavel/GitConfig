@@ -1,0 +1,10 @@
+[alias]
+  br = branch
+  ch = checkout
+  c = commit -m
+  s = status
+  l = log --oneline -4 --no-merges
+  d = diff HEAD
+  rb = rebase
+  a = add -A
+  rhh = reset --hard HEAD
