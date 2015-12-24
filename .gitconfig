@@ -3,7 +3,7 @@
   ch = checkout
   c = commit -m
   s = status
-  l = log --oneline -4 --no-merges
+  l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --abbrev-commit -10 --no-merges
   d = diff HEAD
   rb = rebase
   a = add -A
