@@ -1,10 +1,21 @@
 [alias]
-  br = branch
-  ch = checkout
-  c = commit -m
-  s = status
-  l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --abbrev-commit -10 --no-merges
-  d = diff HEAD
-  rb = rebase
   a = add -A
+  am = commit -a --ammend
+  br = branch
+  c = commit -m
+  ch = checkout
+  d = difftool HEAD --no-prompt
+  l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --abbrev-commit -10 --no-merges
+  rb = rebase
   rhh = reset --hard HEAD
+  s = status
+[color]
+	ui = true
+[merge]
+	tool = meld
+[mergetool "meld"]
+	cmd = meld.exe \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+[diff]
+	tool = meld
+[difftool "meld"]
+	cmd = meld.exe \"$LOCAL\" \"$REMOTE\"
