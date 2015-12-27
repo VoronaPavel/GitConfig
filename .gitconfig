@@ -9,7 +9,7 @@
   l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --abbrev-commit -10 --no-merges
   rb = rebase
   rhh = reset --hard HEAD
-  s = status
+  s = status --short
 [color]
 	ui = true
 [merge]
