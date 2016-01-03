@@ -6,6 +6,7 @@
   ca = commit -a -m
   ch = checkout
   chb = checkout -b
+  cl =  clone
   d = difftool HEAD --no-prompt
   l = log --color --graph --pretty=format:'%Cred%h%Creset - %<|(60)%s %Cgreen%<(15)%ar%Creset %C(bold blue)<%an>%Creset %C(yellow)%d%Creset ' --abbrev-commit -10 --no-merges
   rb = rebase
