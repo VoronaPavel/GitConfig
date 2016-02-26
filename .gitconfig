@@ -2,8 +2,10 @@
   a = add -A
   am = commit -a --ammend
   br = branch
+  pr = pull --rebase
   c = commit -m
   ca = commit -a -m
+  can = !git add -A && git commit --amend --no-edit
   ch = checkout
   chb = checkout -b
   cl =  clone
@@ -13,12 +15,14 @@
   rhh = !git add -A && git commit -m 'UNDONE commit' && git reset --hard HEAD^
   s = status --short
 [color]
-	ui = true
+  ui = true
 [merge]
-	tool = meld
+  tool = meld
 [mergetool "meld"]
-	cmd = meld.exe \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+  cmd = meld.exe \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
 [diff]
-	tool = meld
+  tool = meld
 [difftool "meld"]
-	cmd = meld.exe \"$LOCAL\" \"$REMOTE\"
+  cmd = meld.exe \"$LOCAL\" \"$REMOTE\"
+[credential]
+	helper = wincred
