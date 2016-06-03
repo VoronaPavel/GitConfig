@@ -4,13 +4,13 @@
   br = branch
   pr = pull --rebase
   c = commit -m
-  ca = commit -a -m
+  ca = !git add -A && git commit -a -m
   can = !git add -A && git commit --amend --no-edit
   ch = checkout
   chb = checkout -b
   cl =  clone
   d = difftool HEAD --no-prompt
-  l = log --color --graph --pretty=format:'%Cred%h%Creset - %<|(60)%s %Cgreen%<(15)%ar%Creset %C(bold blue)<%an>%Creset %C(yellow)%d%Creset ' --abbrev-commit -10 --no-merges
+  l = log --color --graph --pretty=format:'%Cred%h%Creset - %<|(60)%s %Cgreen%<(15)%ar%Creset %C(bold blue)<%an>%Creset %C(yellow)%d%Creset ' --abbrev-commit -10
   rb = rebase
   rhh = !git add -A && git commit -m 'UNDONE commit' && git reset --hard HEAD^
   s = status --short
@@ -26,3 +26,5 @@
   cmd = meld.exe \"$LOCAL\" \"$REMOTE\"
 [credential]
 	helper = wincred
+[url "https://github"]
+	insteadOf = git://github
