@@ -10,10 +10,11 @@
   chb = checkout -b
   cl =  clone
   d = difftool HEAD --no-prompt
-  l = log --color --graph --pretty=format:'%Cred%h%Creset - %<|(60)%s %Cgreen%<(15)%ar%Creset %C(bold blue)<%an>%Creset %C(yellow)%d%Creset ' --abbrev-commit -10
+  l = log --color --pretty=format:'%Cred%h%Creset  %<|(85)%s %Cgreen%<(15)%ar%Creset %C(bold blue)<%an>%Creset' --abbrev-commit -10
+  lf = log --color --graph --pretty=format:'%Cred%h%Creset - %<|(60)%s %Cgreen%<(15)%ar%Creset %C(bold blue)<%an>%Creset %C(yellow)%d%Creset ' --abbrev-commit -10
   rb = rebase
   rbc = !git add -A && git rebase --continue
-  rba = rebase --abort  
+  rba = rebase --abort
   rhh = !git add -A && git commit -m 'UNDONE commit' && git reset --hard HEAD^
   s = status --short
 [color]
@@ -30,3 +31,5 @@
 	helper = wincred
 [url "https://github"]
 	insteadOf = git://github
+[push]
+	default = simple
